@@ -1,0 +1,26 @@
+Station,Station_Name,Average_Delay(min),Right Time (0–15 min’s),Slight Delay (15–60 min’s),Significant Delay (>1 Hour),Cancelled/Unknown
+NDLS,New Delhi,5,90.0,6.0,2.0,2.0
+AGC,Agra Cantt,7,87.8,7.0,2.6,2.0
+MTJ,Mathura,9,85.6,8.0,3.2,2.0
+JP,Jaipur,11,83.4,9.0,3.8,2.0
+JU,Jodhpur,13,81.2,10.0,4.4,2.0
+BHU,Bhuvaneshwar?,15,79.0,11.0,5.0,2.0
+BPL,Bhopal,17,76.8,12.0,5.6,2.0
+ITR,Itarsi,19,74.6,13.0,6.2,2.0
+JBP,Jabalpur,21,72.4,14.0,6.8,2.0
+NGP,Nagpur,23,70.2,15.0,7.4,2.0
+BPL2,Bhopal2,25,68.0,16.0,8.0,2.0
+CSTM,Mumbai Cst,27,65.8,17.0,8.6,2.0
+SUR,Surat,29,63.6,18.0,9.2,2.0
+BRC,Vadodara,31,61.4,19.0,9.8,2.0
+RTM,Ratlam,33,59.2,20.0,10.4,2.0
+SVDK,Sivadi?,35,57.0,21.0,11.0,2.0
+KYN,Kalyan,37,54.8,22.0,11.6,2.0
+PUNE,Pune,39,52.6,23.0,12.2,2.0
+MAO,Mangalore,41,50.4,24.0,12.8,2.0
+ERS,Ernakulam,43,48.2,25.0,13.4,2.0
+TVM,Trivandrum,45,46.0,26.0,14.0,2.0
+MDU,Madurai,47,43.8,27.0,14.6,2.0
+MAS,Chennai,49,41.6,28.0,15.2,2.0
+SBC,Bengaluru Cantt,51,39.4,29.0,15.8,2.0
+KSR,KSR Bengaluru,53,37.2,30.0,16.4,2.0

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RailOptimus Live Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 20px; }
+    h1 { color: #333; }
+    #dashboard { border: 1px solid #ccc; background-color: #fff; padding: 15px; border-radius: 5px; }
+    .train { border-bottom: 1px solid #eee; padding: 10px; }
+    .train strong { color: #0056b3; }
+  </style>
+</head>
+<body>
+
+  <h1>RailOptimus Live Dashboard 🚂</h1>
+  <div id="dashboard">
+    <h2>Live Train States</h2>
+    <div id="train-list">Loading live train data...</div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const trainListDiv = document.getElementById('train-list');
+
+    // Function to render all trains
+    function renderTrains(trains) {
+      if (trains.length === 0) {
+        trainListDiv.innerHTML = '<p>No active trains in the system.</p>';
+        return;
+      }
+      trainListDiv.innerHTML = trains.map(trainState => `
+        <div class="train" id="train-${trainState._id}">
+          <strong>Train ID:</strong> ${trainState.train_id.train_id} |
+          <strong>Status:</strong> ${trainState.status} |
+          <strong>Current Block:</strong> ${trainState.current_block_id}
+        </div>
+      `).join('');
+    }
+
+    // Listen for the initial list of trains when we connect
+    socket.on('initialTrainStates', (trains) => {
+      console.log('Received initial train states:', trains);
+      renderTrains(trains);
+    });
+
+    // Listen for single updates
+    socket.on('trainUpdate', (updatedTrain) => {
+      console.log('Received train update:', updatedTrain);
+      // Find the existing train div and update it, or re-render all
+      const existingTrainDiv = document.getElementById(`train-${updatedTrain._id}`);
+      if (existingTrainDiv) {
+        existingTrainDiv.innerHTML = `
+          <strong>Train ID:</strong> ${updatedTrain.train_id.train_id} |
+          <strong>Status:</strong> ${updatedTrain.status} |
+          <strong>Current Block:</strong> ${updatedTrain.current_block_id}
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

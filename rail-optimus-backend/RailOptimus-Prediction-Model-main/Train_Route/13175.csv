@@ -1,0 +1,16 @@
+Station,Station_Name,Average_Delay(min),Right Time (0–15 min’s),Slight Delay (15–60 min’s),Significant Delay (>1 Hour),Cancelled/Unknown
+SDAH,Sealdah,6,89.0,7.0,2.0,2.0
+ASN,Asansol,8,87.0,8.0,2.8,2.0
+PNBE,Patna,10,85.0,9.0,3.6,2.0
+NJP,New Jalpaiguri,12,83.0,10.0,4.4,2.0
+MDT,Malda Town,14,81.0,11.0,5.2,2.0
+RNY,Rangiya,16,79.0,12.0,6.0,2.0
+GHY,Guwahati,18,77.0,13.0,6.8,2.0
+SCL,Silchar,20,75.0,14.0,7.6,2.0
+AGN,Agartala,22,73.0,15.0,8.4,2.0
+KYQ,Kamakhya Jn,24,71.0,16.0,9.2,2.0
+DBRG,Dibrugarh,26,69.0,17.0,10.0,2.0
+NTSK,New Tinsukia,28,67.0,18.0,10.8,2.0
+GUP,Golaghat,30,65.0,19.0,11.6,2.0
+JRH,Jorhat,32,63.0,20.0,12.4,2.0
+SVA,Silchar,34,61.0,21.0,13.2,2.0

@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 210 80% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 45%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 215 25% 15%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 210 80% 35%;
+
+    /* Railway status colors */
+    --success: 140 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 95% 55%;
+    --warning-foreground: 0 0% 100%;
+    --danger: 0 75% 55%;
+    --danger-foreground: 0 0% 100%;
+
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 70% 45%));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(210 30% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 80% 25%), hsl(210 80% 35%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(210 30% 80% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(210 30% 70% / 0.4);
+    --shadow-strong: 0 8px 32px hsl(210 30% 60% / 0.5);
+
+    /* Navigation */
+    --nav-background: 215 30% 12%;
+    --nav-foreground: 210 20% 85%;
+    --nav-accent: 210 80% 45%;
+    --nav-accent-foreground: 0 0% 100%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 20% 90%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 210 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 25% 18%;
+    --accent-foreground: 210 20% 90%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 210 80% 50%;
+
+    /* Dark mode status colors */
+    --success: 140 60% 50%;
+    --warning: 45 85% 60%;
+    --danger: 0 75% 60%;
+
+    /* Dark mode navigation */
+    --nav-background: 215 35% 10%;
+    --nav-foreground: 210 20% 85%;
+    --nav-accent: 210 80% 55%;
+    --nav-accent-foreground: 0 0% 100%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  :root {
+    /* Updated background and foreground */
+    --background: 216 59% 90%; /* #d0e3ff in HSL */
+    --foreground: 222 78% 21%; /* #081f5c in HSL */
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

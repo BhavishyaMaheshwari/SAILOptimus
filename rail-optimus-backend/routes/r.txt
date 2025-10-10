@@ -1,0 +1,1 @@
+routes: Defines the URLs of your API (e.g., /api/sections).

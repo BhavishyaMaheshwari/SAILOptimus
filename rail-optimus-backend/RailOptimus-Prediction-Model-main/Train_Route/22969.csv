@@ -1,0 +1,13 @@
+Station,Station_Name,Average_Delay(min),Right Time (0–15 min’s),Slight Delay (15–60 min’s),Significant Delay (>1 Hour),Cancelled/Unknown
+OKHA,Okha,6,89.0,7.0,2.0,2.0
+BHUJ,Bhuj,8,87.0,8.0,2.7,2.0
+SUR,Surat,10,85.0,9.0,3.4,2.0
+BRC,Vadodara,12,83.0,10.0,4.1,2.0
+RTM,Ratlam,14,81.0,11.0,4.8,2.0
+JP,Jaipur,16,79.0,12.0,5.5,2.0
+AGC,Agra Cantt,18,77.0,13.0,6.2,2.0
+NDLS,New Delhi,20,75.0,14.0,6.9,2.0
+CNB,Kanpur Central,22,73.0,15.0,7.6,2.0
+PNBE,Patna Jn,24,71.0,16.0,8.3,2.0
+NJP,New Jalpaiguri,26,69.0,17.0,9.0,2.0
+GHY,Guwahati,28,67.0,18.0,9.7,2.0

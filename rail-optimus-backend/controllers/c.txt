@@ -1,0 +1,2 @@
+controllers: Contains the functions that run when a route is requested (e.g., the logic to fetch all sections from the database).
+

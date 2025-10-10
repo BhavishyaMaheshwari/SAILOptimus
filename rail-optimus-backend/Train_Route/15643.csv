@@ -1,0 +1,12 @@
+Station,Station_Name,Average_Delay(min),Right Time (0–15 min’s),Slight Delay (15–60 min’s),Significant Delay (>1 Hour),Cancelled/Unknown
+DBRT,Dibrugarh Town,6,89.0,7.0,2.0,2.0
+GHY,Guwahati,8,87.0,8.0,2.8,2.0
+NJP,New Jalpaiguri,10,85.0,9.0,3.6,2.0
+PNBE,Patna,12,83.0,10.0,4.4,2.0
+CNB,Kanpur Central,14,81.0,11.0,5.2,2.0
+AGC,Agra Cantt,16,79.0,12.0,6.0,2.0
+NDLS,New Delhi,18,77.0,13.0,6.8,2.0
+JP,Jaipur,20,75.0,14.0,7.6,2.0
+JU,Jodhpur,22,73.0,15.0,8.4,2.0
+BPL,Bhopal,24,71.0,16.0,9.2,2.0
+CSTM,Mumbai Cst,26,69.0,17.0,10.0,2.0

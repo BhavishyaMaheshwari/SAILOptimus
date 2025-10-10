@@ -1,0 +1,26 @@
+Station,Station_Name,Average_Delay(min),Right Time (0–15 min’s),Slight Delay (15–60 min’s),Significant Delay (>1 Hour),Cancelled/Unknown
+HWH,Howrah,5,90.0,6.0,2.0,2.0
+ASN,Asansol,7,87.8,7.0,2.6,2.0
+PNBE,Patna,9,85.6,8.0,3.2,2.0
+NJP,New Jalpaiguri,11,83.4,9.0,3.8,2.0
+MDT,Malda Town,13,81.2,10.0,4.4,2.0
+RNY,Rangiya,15,79.0,11.0,5.0,2.0
+GHY,Guwahati,17,76.8,12.0,5.6,2.0
+DBRT,Dibrugarh,19,74.6,13.0,6.2,2.0
+SCL,Silchar,21,72.4,14.0,6.8,2.0
+AGN,Agartala,23,70.2,15.0,7.4,2.0
+KIR,Kiul,25,68.0,16.0,8.0,2.0
+BXR,Buxar,27,65.8,17.0,8.6,2.0
+ARA,Ara,29,63.6,18.0,9.2,2.0
+CNB,Kanpur,31,61.4,19.0,9.8,2.0
+NDLS,New Delhi,33,59.2,20.0,10.4,2.0
+AGC,Agra Cantt,35,57.0,21.0,11.0,2.0
+MTJ,Mathura,37,54.8,22.0,11.6,2.0
+JP,Jaipur,39,52.6,23.0,12.2,2.0
+JU,Jodhpur,41,50.4,24.0,12.8,2.0
+BPL,Bhopal,43,48.2,25.0,13.4,2.0
+ITR,Itarsi,45,46.0,26.0,14.0,2.0
+JBP,Jabalpur,47,43.8,27.0,14.6,2.0
+NGP,Nagpur,49,41.6,28.0,15.2,2.0
+CSTM,Mumbai Cst,51,39.4,29.0,15.8,2.0
+MAO,Mangalore,53,37.2,30.0,16.4,2.0
