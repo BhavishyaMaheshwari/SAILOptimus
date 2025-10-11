@@ -1,0 +1,6 @@
+plant_id,plant_name,daily_demand_mt,quality_requirements
+PLANT_A,Steel Plant A,8000,IRON_ORE
+PLANT_B,Steel Plant B,6000,COAL
+PLANT_C,Steel Plant C,10000,IRON_ORE
+PLANT_D,Steel Plant D,12000,COAL
+PLANT_E,Steel Plant E,4000,IRON_ORE

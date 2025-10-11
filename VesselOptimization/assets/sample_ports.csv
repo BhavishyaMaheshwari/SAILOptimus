@@ -1,0 +1,4 @@
+port_id,port_name,handling_cost_per_mt,daily_capacity_mt,rakes_available_per_day
+HALDIA,Haldia Port,135.0,50000,8
+PARADIP,Paradip Port,125.0,60000,10
+VIZAG,Visakhapatnam Port,130.0,55000,7

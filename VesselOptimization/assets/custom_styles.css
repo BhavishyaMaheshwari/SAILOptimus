@@ -1,0 +1,586 @@
+/* 
+ * SIH Logistics Optimization Dashboard - Professional Styles
+ * Clean, readable, business-focused design
+ */
+
+/* ========== Global Enhancements ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    background-attachment: fixed;
+}
+
+/* ========== KPI Card Enhancements (Professional, Less Flashy) ========== */
+.kpi-card {
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: 8px !important;
+    overflow: visible;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--kpi-color-start, #007bff);
+    border-radius: 8px 8px 0 0;
+}
+
+.kpi-card-danger::before { --kpi-color-start: #dc3545; }
+.kpi-card-warning::before { --kpi-color-start: #ffc107; }
+.kpi-card-success::before { --kpi-color-start: #28a745; }
+.kpi-card-info::before { --kpi-color-start: #17a2b8; }
+.kpi-card-primary::before { --kpi-color-start: #007bff; }
+.kpi-card-secondary::before { --kpi-color-start: #6c757d; }
+
+/* ========== KPI Tooltip (Hover Information) ========== */
+.kpi-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(33, 37, 41, 0.98);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    width: 320px;
+    max-width: 90vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+.kpi-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: rgba(33, 37, 41, 0.98);
+}
+
+.kpi-card:hover .kpi-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+.kpi-tooltip-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ffc107;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 6px;
+}
+
+.kpi-tooltip-formula {
+    font-family: 'Courier New', monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-size: 12px;
+    border-left: 3px solid #17a2b8;
+}
+
+.kpi-tooltip-factors {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kpi-tooltip-factor {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+    font-size: 12px;
+}
+
+.kpi-tooltip-factor i {
+    width: 20px;
+    color: #28a745;
+    margin-right: 8px;
+}
+
+/* ========== Demurrage Highlight ========== */
+.demurrage-card {
+    background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+    border: 2px solid #ffc107 !important;
+}
+
+.demurrage-card .kpi-card::before {
+    height: 6px;
+    background: linear-gradient(90deg, #ff6b6b, #ffc107, #ff6b6b);
+    background-size: 200% 100%;
+    animation: demurrage-pulse 3s ease infinite;
+}
+
+@keyframes demurrage-pulse {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ========== Demurrage Badge (Subtle, Professional) ========== */
+.demurrage-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #dc3545;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+    animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
+}
+
+/* Demurrage card highlight (removed excessive pulse) */
+.demurrage-card {
+    border-left: 3px solid #dc3545 !important;
+}
+
+/* ========== Chart Container Enhancements ========== */
+.chart-container {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+
+.chart-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-info-icon {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #6c757d;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    cursor: help;
+    transition: all 0.2s ease;
+}
+
+.chart-info-icon:hover {
+    background: #007bff;
+    transform: scale(1.1);
+}
+
+.chart-info-tooltip {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #495057;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    width: 280px;
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.chart-info-icon:hover + .chart-info-tooltip,
+.chart-info-tooltip:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========== Card Header Enhancements (Less Flashy) ========== */
+.card-header {
+    background: #f8f9fa !important;
+    color: #212529 !important;
+    font-weight: 600;
+    padding: 12px 16px !important;
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+.card-header i {
+    margin-right: 6px;
+}
+
+/* ========== Value Display (Professional, No Gradients) ========== */
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    animation: value-fade-in 0.4s ease;
+}
+
+@keyframes value-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Delta Indicators ========== */
+.delta-positive {
+    color: #28a745;
+    font-weight: 600;
+    animation: delta-pop 0.4s ease;
+}
+
+.delta-negative {
+    color: #dc3545;
+    font-weight: 600;
+    animation: delta-pop 0.4s ease;
+}
+
+@keyframes delta-pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ========== Alerts & Info Boxes ========== */
+.alert-info {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+    border-left: 4px solid #2196f3 !important;
+    border-radius: 8px !important;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%) !important;
+    border-left: 4px solid #ff9800 !important;
+    border-radius: 8px !important;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%) !important;
+    border-left: 4px solid #4caf50 !important;
+    border-radius: 8px !important;
+}
+
+/* ========== Button Enhancements ========== */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+    border: none !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%) !important;
+    border: none !important;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    border: none !important;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+    border: none !important;
+}
+
+/* ========== Loading Animation ========== */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(102, 126, 234, 0.2);
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========== Table Enhancements ========== */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    font-weight: 600;
+    padding: 12px !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner tr:hover {
+    background: rgba(102, 126, 234, 0.05) !important;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* ========== Navbar Enhancements ========== */
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* ========== Tab Enhancements ========== */
+.nav-tabs .nav-link {
+    border-radius: 8px 8px 0 0 !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* Tabs layout enhancement for logs/export CTA */
+.tabs-with-export .nav {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-x: auto;
+}
+
+.tabs-with-export .nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tabs-with-export .nav-item:last-child {
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .tabs-with-export .nav {
+        flex-wrap: wrap;
+    }
+    .tabs-with-export .nav-item:last-child {
+        margin-left: 0;
+    }
+}
+
+.nav-tabs .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* ========== Status Badge ========== */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-optimal {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+}
+
+.status-running {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 768px) {
+    .kpi-tooltip {
+        width: 280px;
+    }
+    
+    .kpi-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .kpi-value {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========== Scrollbar Styling ========== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* ========== Chart Info Icons & Tooltips ========== */
+.chart-info-icon {
+    cursor: help;
+    color: #6c757d;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin-left: 8px;
+}
+
+.chart-info-icon:hover {
+    color: #007bff;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.chart-info-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -150px;
+    z-index: 9999;
+    min-width: 350px;
+    max-width: 450px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin-top: 8px;
+    animation: slideDown 0.3s ease;
+}
+
+.chart-info-icon:hover + .chart-info-tooltip,
+.chart-info-tooltip:hover {
+    display: block;
+}
+
+.chart-info-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #667eea;
+}
+
+.chart-info-tooltip strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 6px;
+}
+
+.chart-info-tooltip ul {
+    margin: 8px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.chart-info-tooltip ul li {
+    margin: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.chart-info-tooltip ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+    .kpi-tooltip,
+    .chart-info-tooltip {
+        display: none !important;
+    }
+    
+    .kpi-card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
