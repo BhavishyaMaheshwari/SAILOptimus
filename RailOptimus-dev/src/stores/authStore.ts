@@ -15,6 +15,13 @@ interface AuthState {
   token: string | null;
   isAuthenticated: boolean;
   login: (username: string, password: string) => Promise<boolean>;
+  signup: (payload: {
+    name: string;
+    section: string;
+    username: string;
+    password: string;
+    passwordConfirm: string;
+  }) => Promise<boolean>;
   logout: () => void;
 }
 
@@ -53,6 +60,24 @@ export const useAuthStore = create<AuthState>()(
        */
       logout: () => {
         set({ user: null, token: null, isAuthenticated: false });
+      },
+      /**
+       * Registers a new user via the backend API.
+       */
+      signup: async (payload) => {
+        try {
+          const response = await axios.post(`${API_URL}/signup`, payload);
+
+          if (response.data.status === 'success') {
+            const { user, token } = response.data.data;
+            set({ user, token, isAuthenticated: true });
+            return true;
+          }
+          return false;
+        } catch (error: any) {
+          console.error('Signup failed:', error.response?.data?.message || error.message);
+          throw new Error(error.response?.data?.message || 'Signup failed.');
+        }
       },
     }),
     {

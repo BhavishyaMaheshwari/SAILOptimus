@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Train, ArrowLeft, Loader2 } from "lucide-react";
+import { Ship, ArrowLeft, Loader2 } from "lucide-react";
 import { useAuthStore } from "../stores/authStore";
 import { useToast } from "@/hooks/use-toast";
 
@@ -83,14 +83,14 @@ export default function Signup() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <div className="flex items-center justify-center w-16 h-16 bg-primary rounded-xl shadow-medium">
-              <Train className="h-8 w-8 text-primary-foreground" />
+              <Ship className="h-8 w-8 text-primary-foreground" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-foreground mb-2">
-            R<span className="text-primary">AI</span>lOptimus
+            S<span className="text-primary">AI</span>L
           </h1>
           <p className="text-muted-foreground">
-            Create Section Controller Account
+            Create Logistics Officer Account
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export default function Signup() {
           <CardHeader className="space-y-1">
             <CardTitle className="text-2xl text-center">Sign Up</CardTitle>
             <CardDescription className="text-center">
-              Create your section controller account
+              Create your Logistics Officer account
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -125,7 +125,7 @@ export default function Signup() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="section">Section</Label>
+                <Label htmlFor="section">Port</Label>
                 <Input
                   id="section"
                   name="section"
