@@ -11,6 +11,7 @@ import {
   PlayCircle, 
   LogOut,
   Train,
+  Anchor,
   Activity
 } from "lucide-react";
 import { useAuthStore } from "@/stores/authStore";
@@ -45,13 +46,13 @@ export default function AppLayout({ children }: AppLayoutProps) {
           <div className="p-6 border-b border-nav-accent/20">
             <Link to="/dashboard" className="flex items-center space-x-3">
               <div className="flex items-center justify-center w-10 h-10 bg-nav-accent rounded-lg">
-                <Train className="h-6 w-6 text-nav-accent-foreground" />
+                <Anchor className="h-6 w-6 text-nav-accent-foreground" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-nav-foreground">
-                  R<span className="text-nav-accent">AI</span>lOptimus
+                  S<span className="text-nav-accent">AI</span>L
                 </h1>
-                <p className="text-xs text-nav-foreground/70">Section Control</p>
+                <p className="text-xs text-nav-foreground/70">Logistics Control</p>
               </div>
             </Link>
           </div>
