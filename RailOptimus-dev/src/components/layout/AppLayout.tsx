@@ -50,7 +50,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-nav-foreground">
-                  S<span className="text-nav-accent">AI</span>L
+                  S<span className="text-nav-accent">AI</span>LOptimus
                 </h1>
                 <p className="text-xs text-nav-foreground/70">Logistics Control</p>
               </div>
@@ -89,10 +89,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-nav-foreground truncate">
-                    {user?.name || "Section Controller"}
+                    {user?.name || "Logistics Manager"}
                   </p>
                   <p className="text-xs text-nav-foreground/70 truncate">
-                    Section {user?.section || "A1"}
+                    Port {user?.section || "Haldia"}
                   </p>
                 </div>
               </div>

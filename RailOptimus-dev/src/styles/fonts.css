@@ -1,0 +1,17 @@
+/* Imported EB Garamond font for landing page paragraph */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@300;400;700&display=swap');
+
+.eb-garamond {
+  font-family: 'EB Garamond', serif;
+  /* Improve readability by adding spacing */
+  word-spacing: 0.18em; /* space between words */
+  letter-spacing: 0.01em; /* slight tracking to avoid crowding */
+  line-height: 1.6; /* looser leading for multi-line paragraphs */
+  /* Justify text and improve inter-word justification */
+  text-align: justify;
+  text-justify: inter-word;
+  /* Enable hyphenation where supported to avoid large gaps */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}

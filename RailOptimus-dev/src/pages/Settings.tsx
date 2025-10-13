@@ -28,7 +28,7 @@ export default function Settings() {
             Profile Information
           </CardTitle>
           <CardDescription>
-            View your personal information and section details
+            View your personal information and port details
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -60,7 +60,7 @@ export default function Settings() {
 
             {/* Section */}
             <div className="space-y-2">
-              <Label htmlFor="section" className="text-base">Section</Label>
+              <Label htmlFor="section" className="text-base">Port Name</Label>
               <div className="relative">
                 <MapPin className="absolute left-3 top-3 h-6 w-6 text-muted-foreground" />
                 <Input

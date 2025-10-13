@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Anchor, Zap, Shield, BarChart3 } from "lucide-react";
 import heroImage from "@/assets/railway-hero.jpg";
 import Logo from "@/assets/railOptimus_Logo.png";
+import navbar from "@/assets/navbar.png";
+import "@/styles/fonts.css";
 
 export default function Landing() {
   const features = [
@@ -32,16 +34,19 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card shadow-soft">
+      <header
+        className="border-b border-border shadow-soft"
+        style={{
+          backgroundImage: `url(${navbar})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-15 h-11 bg-[white] rounded-lg">
-                <img
-                  src={Logo}
-                  alt="Railway control center"
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex items-center justify-center w-15 h-11 rounded-lg">
+                <img src={Logo} alt="Port control center (SAIL)" className="w-full h-full object-cover" />
                 {/* <Train className="h-6 w-6 text-primary-foreground" /> */}
               </div>
               {/* <h1 className="text-2xl font-bold text-foreground">
@@ -74,12 +79,12 @@ export default function Landing() {
         <div className="relative container mx-auto px-6 py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
-              S<span className="text-nav-accent">AI</span>L
+              S<span className="text-nav-accent">AI</span>LOptimus
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
               AI-Powered Delay Prediction System for Steel Logistics Operations
             </p>
-            <p className="text-lg text-white/80 mb-10 max-w-2xl">
+            <p className="text-xl text-white/95 mb-14 max-w-2xl eb-garamond">
               Optimize vessel, port, and freight operations with a machine learning-based logistics dashboard designed for SAIL. The system integrates Random Forest models to predict vessel, berthing, and freight delays in real time using parameters such as port congestion, rake availability, and plant utilization, enabling data-driven, cost-optimal scheduling and improved operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
