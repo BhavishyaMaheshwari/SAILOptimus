@@ -3,9 +3,9 @@
 Al-Enabled Logistics Optimizer for Cost-Optimal Vessel Scheduling and Port-Plant Linkage in Steel Supply Chain
 
 ## Tasks Accomplished
-Task 1: Integrated supervised ML models for vessel ETA, port congestion, and demurrage prediction, along with MILP + heuristic-based dispatch optimization in the backend.
-Task 2: Built REST APIs for vessels, ports, plants, stock, schedules, and simulation modules.
-Task 3: Developed a Vite + React + TypeScript frontend with Tailwind, linked to the backend for real-time visualization and scenario simulation.
+-Task 1: Integrated supervised ML models for vessel ETA, port congestion, and demurrage prediction, along with MILP + heuristic-based dispatch optimization in the backend.
+-Task 2: Built REST APIs for vessels, ports, plants, stock, schedules, and simulation modules.
+-Task 3: Developed a Vite + React + TypeScript frontend with Tailwind, linked to the backend for real-time visualization and scenario simulation.
 
 ## Technology Stack
 - Frontend: React + TypeScript, Vite + Bun, Tailwind CSS, shadcn/Radix UI, React Router, Toaster for pop-up, Leaflet for interactive map. 
