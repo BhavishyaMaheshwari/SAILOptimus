@@ -24,5 +24,5 @@
 
 ## Project Links
 
-- **SIH Presentation:** [Presentation Link]()
-- **Video Demonstration:** [Video Link]()
+- **SIH Presentation:** [Presentation Link](https://drive.google.com/file/d/1mGwUPXI5NUwx-1gBuNRk9LEPiZozcTrq/view?usp=sharing)
+- **Video Demonstration:** [Video Link](https://youtu.be/Z64fNkR3K2w)
